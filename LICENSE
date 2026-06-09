@@ -1,0 +1,56 @@
+Agentic Memory CLI — End User License Agreement
+
+Copyright (c) 2024-2026 Tyga.Cloud Ltd. All rights reserved.
+
+This software is proprietary and confidential. Unauthorised copying, modification,
+distribution, or use of this software, via any medium, is strictly prohibited.
+
+Permission is hereby granted to install and use this CLI tool ("agmry") for the
+purpose of interacting with the Agentic Memory service (agenticmemory.ai),
+subject to a valid API key and acceptance of the Terms of Service at
+https://agenticmemory.ai/terms.
+
+You may NOT:
+- Reverse-engineer, decompile, or disassemble this software
+- Remove or alter any proprietary notices
+- Redistribute or sublicense this software
+- Use this software to compete with Agentic Memory
+
+1. DISCLAIMER OF WARRANTIES
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. TYGA.CLOUD LTD DOES
+NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF
+HARMFUL COMPONENTS. YOU ASSUME ALL RISK ARISING FROM YOUR USE OF THE SOFTWARE.
+
+2. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
+TYGA.CLOUD LTD, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR
+ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY
+LOSS OF PROFITS, REVENUE, DATA, OR USE, WHETHER IN AN ACTION IN CONTRACT, TORT
+(INCLUDING NEGLIGENCE), OR OTHERWISE, ARISING OUT OF OR IN CONNECTION WITH THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+IN ALL CASES, THE AGGREGATE LIABILITY OF TYGA.CLOUD LTD UNDER OR IN CONNECTION
+WITH THIS AGREEMENT SHALL NOT EXCEED THE TOTAL FEES PAID BY YOU TO TYGA.CLOUD
+LTD FOR THE SERVICE DURING THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE
+EVENT GIVING RISE TO THE CLAIM.
+
+3. INDEMNIFICATION
+
+YOU AGREE TO INDEMNIFY, DEFEND, AND HOLD HARMLESS TYGA.CLOUD LTD AND ITS
+OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS FROM AND AGAINST ANY AND ALL
+CLAIMS, DAMAGES, LOSSES, LIABILITIES, COSTS, AND EXPENSES (INCLUDING
+REASONABLE LEGAL FEES) ARISING OUT OF OR IN CONNECTION WITH: (A) YOUR USE OF
+THE SOFTWARE; (B) YOUR VIOLATION OF THIS AGREEMENT OR ANY APPLICABLE LAW; OR
+(C) ANY CONTENT OR DATA YOU TRANSMIT THROUGH THE SOFTWARE.
+
+4. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws
+of England and Wales. Any disputes arising under this Agreement shall be subject
+to the exclusive jurisdiction of the courts of England and Wales.
+
+For licensing enquiries: joe@tyga.cloud

@@ -1,0 +1,12 @@
+node_modules/
+src/
+dist/
+scripts/
+tests/
+.env*
+.agmry/
+.DS_Store
+*.log
+*.tgz
+CLAUDE.md
+bin/
