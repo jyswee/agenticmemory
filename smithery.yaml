@@ -1,0 +1,18 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: [apiKey]
+    properties:
+      apiKey:
+        type: string
+        description: Agentic Memory API key (amk_...). Get one instantly with `agmry signup my-project`.
+      baseUrl:
+        type: string
+        default: https://agenticmemory.ai
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "agmry", "mcp-serve"],
+      env: { AGMRY_API_KEY: config.apiKey, AGMRY_URL: config.baseUrl || "https://agenticmemory.ai" }
+    })
