@@ -120,6 +120,33 @@ URL:  https://mcp.agenticmemory.ai/sse
 Auth: Authorization: Bearer YOUR_API_KEY
 ```
 
+## End-to-end encryption (zero-knowledge spaces)
+
+Create a space the server can never read. Encryption happens inside the CLI —
+the API only ever sees ciphertext.
+
+```bash
+agmry key generate                                  # one-time: creates + saves your key
+agmry space create "Private" private --encryption e2e
+
+agmry store SPACE "my secret"                       # encrypted before it leaves your machine
+agmry recall SPACE                                  # transparently decrypted
+agmry key verify SPACE                              # holding the right key?
+```
+
+Or derive per-space keys from a passphrase instead of storing a key:
+
+```bash
+agmry key set --passphrase "long secret phrase"
+```
+
+Notes:
+- Semantic search is impossible on zero-knowledge spaces by design.
+- Prefer **encrypted at rest** instead? `--encryption managed` — the server encrypts your data at rest and every feature (search, summaries) keeps working. No client key needed.
+- Losing the key or passphrase means the data is unrecoverable. That's the point. Back it up: `agmry key show --reveal`.
+
+Key resolution order: `--enc-key` / `--passphrase` flag → `AGMRY_ENCRYPTION_KEY` env → `./.agmry/config.json` → `~/.agmry/config.json`. Same envelope and key derivation as the Node and Python SDKs — keys are interchangeable across all three.
+
 ## Multi-agent: one brain, many agents
 
 Spaces are shareable. One agent stores the deploy runbook; another recalls it a week later, from a different machine, over a different interface (CLI, MCP, or REST — same memory). Your agents hand off between sessions and between projects without you couriering context.
@@ -162,6 +189,7 @@ Add `.agmry/` to your `.gitignore`.
 - **MCP server** — 14 tools, local (`agmry mcp-serve`) or fully remote (`mcp.agenticmemory.ai`)
 - **REST API** — same memory on the request path of proxies and pipelines
 - **Multi-agent spaces** — a fleet of agents reads and writes one memory
+- **End-to-end encryption** — zero-knowledge spaces where only you hold the key (`agmry key generate`)
 - **Export** — full data takeout per space, one command (`agmry space export`)
 
 **Pricing:** 7-day free trial — the agent's key works instantly, $0 today. Continue after the trial from $24.99/mo. No data deletion on expiry: your memory waits for you. [Details](https://agenticmemory.ai/pricing).
