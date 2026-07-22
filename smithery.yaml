@@ -2,11 +2,10 @@ startCommand:
   type: stdio
   configSchema:
     type: object
-    required: [apiKey]
     properties:
       apiKey:
         type: string
-        description: Agentic Memory API key (amk_...). Get one instantly with `agmry signup my-project`.
+        description: Agentic Memory API key (amk_...). Optional for tool discovery; required to call a tool. Get one instantly with `agmry signup my-project`.
       baseUrl:
         type: string
         default: https://agenticmemory.ai
