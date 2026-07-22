@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.jyswee/agmry",
+  "description": "Persistent memory for AI agents. Conversation history, key-value context, semantic search, long-term entries, FIFO queues. 17 tools, stdio or remote SSE.",
+  "repository": {
+    "url": "https://github.com/jyswee/agmry",
+    "source": "github"
+  },
+  "version": "1.7.0",
+  "websiteUrl": "https://agenticmemory.ai",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "agmry",
+      "version": "1.7.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "mcp-serve",
+          "isRequired": true
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "AGMRY_API_KEY",
+          "description": "Agentic Memory API key (amk_...). Get one instantly with `agmry signup my-project` — no browser, 7-day free trial.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://mcp.agenticmemory.ai/sse",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token using your Agentic Memory API key: 'Bearer amk_...'. Get one instantly with `npx agmry signup my-project`.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
