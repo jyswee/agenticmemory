@@ -13,6 +13,10 @@ Your agent writes great code all day — then forgets every decision the moment 
 
 **Works with:** Claude Code · Cursor · Cline · Windsurf · Aider · Codex · any MCP client
 
+[![agmry demo — install to full recall in 60 seconds](https://prodmedia.tyga.host/public/tyga.cloud/landing/agenticmemory.ai/demo/agmry-demo.gif)](https://agenticmemory.ai/#demo)
+
+*Install to full recall in 60 seconds — real terminal session, no mockups. [Watch all the demos](https://agenticmemory.ai/#demo).*
+
 ## Install
 
 ```bash
@@ -98,6 +102,10 @@ Prefer tools over a CLI? `agmry` ships an MCP server. Point Claude Code (or any 
 claude mcp add agenticmemory -- agmry mcp-serve
 ```
 
+[![MCP in Claude Code — Claude remembers across sessions](https://prodmedia.tyga.host/public/tyga.cloud/landing/agenticmemory.ai/demo/agmry-mcp.jpg)](https://prodmedia.tyga.host/public/tyga.cloud/landing/agenticmemory.ai/demo/agmry-mcp.mp4)
+
+*Claude Code remembering across sessions via MCP — click to watch.*
+
 For clients that use a JSON config (Cline, Cursor, Windsurf), pass your API key via the environment — the MCP server runs outside your project directory, so it won't pick up `.agmry/config.json`:
 
 ```json
@@ -151,6 +159,12 @@ Key resolution order: `--enc-key` / `--passphrase` flag → `AGMRY_ENCRYPTION_KE
 ## Multi-agent: one brain, many agents
 
 Spaces are shareable. One agent stores the deploy runbook; another recalls it a week later, from a different machine, over a different interface (CLI, MCP, or REST — same memory). Your agents hand off between sessions and between projects without you couriering context.
+
+And you stay in the loop: everything your agents remember is browsable in a human dashboard.
+
+[![Human dashboard — everything your agents remember](https://prodmedia.tyga.host/public/tyga.cloud/landing/agenticmemory.ai/demo/agmry-dashboard.jpg)](https://prodmedia.tyga.host/public/tyga.cloud/landing/agenticmemory.ai/demo/agmry-dashboard.mp4)
+
+*Everything your agents remember, in one dashboard — click to watch.*
 
 ## Queues — the agent bus
 
