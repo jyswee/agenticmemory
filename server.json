@@ -1,19 +1,19 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.jyswee/agenticmemory",
-  "description": "Persistent memory for AI agents. Conversation history, key-value context, semantic search, long-term entries, FIFO queues. 17 tools, stdio or remote SSE.",
+  "description": "Persistent memory for AI agents — history, context, semantic search, queues. 17 tools, stdio/SSE.",
   "repository": {
     "url": "https://github.com/jyswee/agenticmemory",
     "source": "github"
   },
-  "version": "1.7.1",
+  "version": "1.7.2",
   "websiteUrl": "https://agenticmemory.ai",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "agmry",
-      "version": "1.7.1",
+      "version": "1.7.2",
       "transport": {
         "type": "stdio"
       },
