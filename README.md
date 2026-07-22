@@ -91,7 +91,7 @@ agmry boot my-project --semantic "billing refactor"   # or focused on a topic
 
 ## MCP Server
 
-Prefer tools over a CLI? `agmry` ships an MCP server. Point Claude Code (or any MCP client) at it and your agent gets **14 native tools**: store, recall, search, bootstrap, context, entries, spaces.
+Prefer tools over a CLI? `agmry` ships an MCP server. Point Claude Code (or any MCP client) at it and your agent gets **17 native tools**: store, recall, search, bootstrap, context, entries, spaces, queues.
 
 ```bash
 claude mcp add agenticmemory -- agmry mcp-serve
@@ -113,7 +113,7 @@ For clients that use a JSON config (Cline, Cursor, Windsurf), pass your API key 
 
 ### Remote MCP — zero install
 
-Claude Web, Claude Desktop, Raycast, or any hosted MCP client can connect straight to the remote server. Same 14 tools, same API key, nothing to install:
+Claude Web, Claude Desktop, Raycast, or any hosted MCP client can connect straight to the remote server. Same tools, same API key, nothing to install:
 
 ```
 URL:  https://mcp.agenticmemory.ai/sse
@@ -151,6 +151,21 @@ Key resolution order: `--enc-key` / `--passphrase` flag → `AGMRY_ENCRYPTION_KE
 
 Spaces are shareable. One agent stores the deploy runbook; another recalls it a week later, from a different machine, over a different interface (CLI, MCP, or REST — same memory). Your agents hand off between sessions and between projects without you couriering context.
 
+## Queues — the agent bus
+
+FIFO queues inside a space. One agent pushes work, another pops it — no polling glue, no extra infra.
+
+```bash
+agmry queue SPACE jobs push '{"task":"review PR #42"}'   # enqueue (FIFO)
+agmry queue SPACE jobs pop                                # dequeue oldest — exit code 2 if empty
+agmry queue SPACE jobs pop --wait 25                      # long-poll up to 25s for the next item
+agmry queue SPACE jobs                                    # peek: length + head, without consuming
+agmry queue SPACE jobs dlq push '{"task":"..."}' --reason "failed twice"   # dead-letter
+agmry queue SPACE jobs dlq list                           # inspect dead-lettered items
+```
+
+Exit code 2 on empty means shell loops branch cleanly: `while agmry queue SPACE jobs pop --wait 25 --json; do ...; done`. Envelopes are opaque JSON — the server never inspects them.
+
 ## Agent Integration
 
 Add to your CLAUDE.md, .cursorrules, .clinerules, .windsurfrules, or AGENTS.md:
@@ -164,6 +179,8 @@ agmry boot SPACE --json               # load everything at session start
 agmry store SPACE "what happened"     # remember something
 agmry ctx SPACE set key "value"       # store a durable decision/fact
 agmry search SPACE "the deadline"     # find past context
+agmry queue SPACE jobs push '{...}'   # send work to another agent
+agmry queue SPACE jobs pop --wait 25  # receive work (exit 2 = empty)
 ```
 
 ## Config Priority
@@ -186,7 +203,8 @@ Add `.agmry/` to your `.gitignore`.
 - **Semantic search** — across everything the agent has ever stored
 - **Bootstrap** — full session context in one call
 - **Agent self-signup** — working API key from one CLI command, 7-day trial starts instantly
-- **MCP server** — 14 tools, local (`agmry mcp-serve`) or fully remote (`mcp.agenticmemory.ai`)
+- **Queues** — FIFO agent bus with long-poll and dead-letter, `agmry queue` (exit 2 = empty)
+- **MCP server** — 17 tools, local (`agmry mcp-serve`) or fully remote (`mcp.agenticmemory.ai`)
 - **REST API** — same memory on the request path of proxies and pipelines
 - **Multi-agent spaces** — a fleet of agents reads and writes one memory
 - **End-to-end encryption** — zero-knowledge spaces where only you hold the key (`agmry key generate`)
