@@ -38,10 +38,10 @@
   "homepage": "https://agenticmemory.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jyswee/agmry.git"
+    "url": "https://github.com/jyswee/agenticmemory.git"
   },
   "bugs": {
-    "url": "https://github.com/jyswee/agmry/issues"
+    "url": "https://github.com/jyswee/agenticmemory/issues"
   },
   "engines": {
     "node": ">=18"

@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/agmry.svg)](https://www.npmjs.com/package/agmry)
 [![MCP](https://img.shields.io/badge/MCP-17_tools-blue)](https://agenticmemory.ai/quickstart)
 [![Remote MCP](https://img.shields.io/badge/remote_MCP-mcp.agenticmemory.ai-8b5cf6)](#remote-mcp--zero-install)
-[![smithery badge](https://smithery.ai/badge/jyswee/agmry)](https://smithery.ai/servers/jyswee/agmry)
+[![smithery badge](https://smithery.ai/badge/jyswee/agenticmemory)](https://smithery.ai/servers/jyswee/agenticmemory)
 
 **Persistent memory for AI agents — conversation history, key-value context, and semantic search across sessions. As easy as git.**
 
@@ -243,7 +243,7 @@ Claude Memory is great — but it only works with Claude, and only Claude decide
 
 ## Why this exists
 
-I was my agents' memory. Every session started with me re-explaining my own project to my own tools — decisions, preferences, what broke last time. So I built the memory they run themselves. My own agents use it in production across a dozen projects; if something's rough or missing, [open an issue](https://github.com/jyswee/agmry/issues) — I read every one.
+I was my agents' memory. Every session started with me re-explaining my own project to my own tools — decisions, preferences, what broke last time. So I built the memory they run themselves. My own agents use it in production across a dozen projects; if something's rough or missing, [open an issue](https://github.com/jyswee/agenticmemory/issues) — I read every one.
 
 ## Documentation
 
