@@ -6,14 +6,14 @@
     "url": "https://github.com/jyswee/agenticmemory",
     "source": "github"
   },
-  "version": "1.7.0",
+  "version": "1.7.1",
   "websiteUrl": "https://agenticmemory.ai",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "agmry",
-      "version": "1.7.0",
+      "version": "1.7.1",
       "transport": {
         "type": "stdio"
       },
@@ -28,7 +28,7 @@
       "environmentVariables": [
         {
           "name": "AGMRY_API_KEY",
-          "description": "Agentic Memory API key (amk_...). Get one instantly with `agmry signup my-project` — no browser, 7-day free trial.",
+          "description": "Agentic Memory API key (amk_...). Get one instantly with `agmry signup my-project` — no browser, no card, live for 48h; $0 card-auth starts the free 7-day trial.",
           "isRequired": true,
           "isSecret": true
         }

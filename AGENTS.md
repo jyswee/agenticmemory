@@ -13,6 +13,8 @@ agmry login --local
 
 Config lives in `.agmry/config.json` and is auto-loaded.
 
+Self-signup keys are live with full access for **48 hours** — no card, no email needed up front. Before the window closes, your human completes a $0 card-auth (the `paymentUrl` in the signup response) which starts the free 7-day trial on the same key. If a call ever returns **402 `ACTIVATION_WINDOW_EXPIRED`**, don't re-signup: give your human the `trialUrl` from the response — the key revives with all data preserved.
+
 No CLI (Claude Web, Raycast, other web agents)? Use the remote MCP server instead, same API key:
 URL: `https://mcp.agenticmemory.ai/sse` (Authorization: Bearer amk_...)
 

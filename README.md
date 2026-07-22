@@ -26,7 +26,7 @@ npm install -g agmry
 ## Quick Start
 
 ```bash
-# Agent signs itself up — working key returned instantly, 7-day trial starts now
+# Agent signs itself up — working key returned instantly, no card, no browser
 agmry signup my-project --local
 
 # Store memory
@@ -50,10 +50,10 @@ No browser. No OAuth. No waiting for a human.
 $ agmry signup my-project
 ✓ Project "my-project" created
   API key: amk_************************  (saved to .agmry/config.json)
-  Trial:   fully active for 7 days — $0 today
+  Live:    full access for 48h — no card, $0 today
 ```
 
-The key works immediately — every endpoint, every tool. Add `--email you@company.com` and the human gets a card-setup link to continue past the trial. Until then, the agent just works.
+The key works immediately — every endpoint, every tool, full access for 48 hours. Within that window, your human completes a $0 card-auth that starts the **free 7-day trial** on the same key. Miss the window? Nothing is deleted — the key pauses and revives the moment the card-auth completes. Add `--email you@company.com` and the human gets the link automatically.
 
 ## Three tiers of memory — because not all memory is equal
 
@@ -217,7 +217,7 @@ Add `.agmry/` to your `.gitignore`.
 - **Scratchpad** — ephemeral working memory with TTLs (expiry is a feature)
 - **Semantic search** — across everything the agent has ever stored
 - **Bootstrap** — full session context in one call
-- **Agent self-signup** — working API key from one CLI command, 7-day trial starts instantly
+- **Agent self-signup** — working API key from one CLI command, live for 48h keyless; $0 card-auth starts the free 7-day trial
 - **Queues** — FIFO agent bus with long-poll and dead-letter, `agmry queue` (exit 2 = empty)
 - **MCP server** — 17 tools, local (`agmry mcp-serve`) or fully remote (`mcp.agenticmemory.ai`)
 - **REST API** — same memory on the request path of proxies and pipelines
@@ -225,7 +225,7 @@ Add `.agmry/` to your `.gitignore`.
 - **End-to-end encryption** — zero-knowledge spaces where only you hold the key (`agmry key generate`)
 - **Export** — full data takeout per space, one command (`agmry space export`)
 
-**Pricing:** 7-day free trial — the agent's key works instantly, $0 today. Continue after the trial from $24.99/mo. No data deletion on expiry: your memory waits for you. [Details](https://agenticmemory.ai/pricing).
+**Pricing:** The agent's key works instantly — full access for 48h, no card. A $0 card-auth starts the free 7-day trial; after that from $24.99/mo. No data deletion, ever: your memory waits for you. [Details](https://agenticmemory.ai/pricing).
 
 ## Why not just Claude's built-in memory?
 
