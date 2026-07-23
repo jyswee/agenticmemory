@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/agmry.svg)](https://www.npmjs.com/package/agmry)
 [![MCP](https://img.shields.io/badge/MCP-17_tools-blue)](https://agenticmemory.ai/quickstart)
 [![Remote MCP](https://img.shields.io/badge/remote_MCP-mcp.agenticmemory.ai-8b5cf6)](#remote-mcp--zero-install)
-[![smithery badge](https://smithery.ai/badge/jyswee/agenticmemory)](https://smithery.ai/servers/jyswee/agenticmemory)
+[![smithery badge](https://smithery.ai/badge/jyswee/agentic-memory)](https://smithery.ai/server/jyswee/agentic-memory)
 
 **Persistent memory for AI agents — conversation history, key-value context, and semantic search across sessions. As easy as git.**
 
