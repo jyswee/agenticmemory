@@ -6,14 +6,14 @@
     "url": "https://github.com/jyswee/agenticmemory",
     "source": "github"
   },
-  "version": "1.7.3",
+  "version": "1.7.4",
   "websiteUrl": "https://agenticmemory.ai",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "agmry",
-      "version": "1.7.3",
+      "version": "1.7.4",
       "transport": {
         "type": "stdio"
       },
@@ -28,8 +28,8 @@
       "environmentVariables": [
         {
           "name": "AGMRY_API_KEY",
-          "description": "Agentic Memory API key (amk_...). Get one instantly with `agmry signup my-project` — no browser, no card, live for 48h; $0 card-auth starts the free 7-day trial.",
-          "isRequired": true,
+          "description": "Agentic Memory API key (amk_...). Optional for tool discovery; required to call a tool. Get one instantly with `agmry signup my-project` — no browser, no card, live for 48h; $0 card-auth starts the free 7-day trial.",
+          "isRequired": false,
           "isSecret": true
         }
       ]
@@ -42,8 +42,8 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer token using your Agentic Memory API key: 'Bearer amk_...'. Get one instantly with `npx agmry signup my-project`.",
-          "isRequired": true,
+          "description": "Bearer token using your Agentic Memory API key: 'Bearer amk_...'. Optional for tool discovery; required to call a tool. Get one instantly with `npx agmry signup my-project`.",
+          "isRequired": false,
           "isSecret": true
         }
       ]
