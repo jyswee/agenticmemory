@@ -1,6 +1,6 @@
 {
   "name": "agmry",
-  "version": "1.7.5",
+  "version": "1.8.0",
   "description": "Agentic Memory CLI — persistent memory for AI agents. As easy as git.",
   "mcpName": "io.github.jyswee/agenticmemory",
   "main": "dist/main.js",
