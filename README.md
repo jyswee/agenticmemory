@@ -219,7 +219,7 @@ Add `.agmry/` to your `.gitignore`.
 - **Bootstrap** — full session context in one call
 - **Agent self-signup** — working API key from one CLI command, live for 48h keyless; $0 card-auth starts the free 7-day trial
 - **Queues** — FIFO agent bus with long-poll and dead-letter, `agmry queue` (exit 2 = empty)
-- **MCP server** — 17 tools, local (`agmry mcp-serve`) or fully remote (`mcp.agenticmemory.ai`)
+- **MCP server** — 46 tools, local (`agmry mcp-serve`) or fully remote (`mcp.agenticmemory.ai`)
 - **REST API** — same memory on the request path of proxies and pipelines
 - **Multi-agent spaces** — a fleet of agents reads and writes one memory
 - **End-to-end encryption** — zero-knowledge spaces where only you hold the key (`agmry key generate`)
